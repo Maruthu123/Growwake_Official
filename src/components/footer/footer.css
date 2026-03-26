@@ -1,0 +1,199 @@
+.footer_wrapper {
+    background: url('../../assests/footer_img.png'); 
+    background-size: cover;  
+    height: auto;
+    margin-top: 20px;
+    position: relative;
+    padding: 40px;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 100px;
+    margin-top: 10vh;
+    color: white;
+    /* margin-left: 50px; */
+}
+
+.footer_contact,
+.footer_logo,
+.footer_nav {
+    flex: 1 1 250px;
+    margin: 20px;
+}
+
+.footer_contact h2 {
+    font-size: 22px;
+}
+
+.footer_contact p {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.footer_contact a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Make phone, email, location clickable but keep style */
+.footer_link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer_link:hover {
+    color: #6614a5;
+}
+
+.enquiry_button {
+    background-color: #6614a5;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.enquiry_button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),
+                0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Social icons styling */
+.icon-link {
+    margin-right: 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.icon-link:last-child {
+    margin-right: 0;
+}
+
+.social-icon {
+    font-size: 32px;
+    color: #d3caca;
+}
+
+.icon-link:hover .social-icon,
+.icon-link:active .social-icon {
+    transform: scale(1.2);
+    color: #007bff;
+}
+
+
+/* ===== NEW: Navigation Link Hover + Active Animation ===== */
+
+.nav-link {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #6614a5;
+}
+
+.nav-link.active {
+    color:#6614a5;
+    transform: scale(1.05);
+}
+
+/* WhatsApp link and icon styling */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-icon {
+  font-size: 30px; /* Increase icon size */
+  margin-right: 10px;
+  color: #d3caca;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.whatsapp-text {
+  font-size: 20px; /* Increase number size */
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.whatsapp-link:hover .whatsapp-icon {
+  transform: scale(1.2);
+  color: #6614a5;
+}
+
+.whatsapp-link:hover .whatsapp-text {
+  color:#6614a5;
+}
+
+.whatsapp-link.clicked .whatsapp-icon,
+.whatsapp-link.clicked .whatsapp-text {
+  color: #6614a5;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 600px) {
+    .footer_wrapper {
+        padding: 100px 20px 10px 20px;
+        background-position: center;
+    }
+
+    .footer_content {
+        flex-direction: column;
+        align-items: flex-start; /* Align all items to left */
+        text-align: left;
+        margin-left: 0;           /* Remove default left margin */
+        padding-left: 0;          /* Remove extra left padding */
+    }
+
+    .footer_contact,
+    .footer_logo,
+    .footer_nav {
+        width: 100%;
+        margin: 0 0 20px 0;       /* Bottom space only */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Keep contents left aligned */
+        padding-left: 0;         /* Ensure no extra left space */
+    }
+
+    .footer_contact h2 {
+        font-size: 20px;
+    }
+
+    .footer_contact p,
+    .footer_contact a {
+        font-size: 14px;
+    }
+
+    .enquiry_button {
+        width: 80%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .social_icons {
+        justify-content: flex-start; /* Icons aligned left */
+        width: 100%;
+    }
+
+    .social_icons svg {
+        font-size: 24px;
+    }
+}
+
+.copy{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fffbfb;
+}

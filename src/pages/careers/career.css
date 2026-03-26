@@ -1,0 +1,360 @@
+/* ------------------------ */
+/* GLOBAL + RESET FIXES     */
+/* ------------------------ */
+*{
+  box-sizing: border-box;
+}
+
+
+.careerbanner_section{
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.careerbanner_left{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    margin: 0;
+    z-index: 2;
+}
+
+.careerbanner_h1{
+    color:#8a2be2;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 56px;
+    margin-bottom: 12px;
+}
+
+.careerbanner_p{
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    max-width: 70%;
+    word-break:break-word;
+    color: #1e3a8a;
+}
+
+/* ------------------------ */
+/* CONTAINER SECTION        */
+/* ------------------------ */
+
+.career_container{
+    background-color: #f5f0ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.career_h2{
+    font-size: 32px;
+    font-weight: 500;
+    color:#8a2be2;
+    margin-bottom: 30px;
+}
+
+/* ------------------------ */
+/* MAIN LAYOUT FIX          */
+/* ------------------------ */
+
+.career_main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    gap: 24px;
+}
+
+.career_left{
+    width: 100%;
+    max-width: 700px;
+}
+
+.career_right{
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------------ */
+/* ACCORDION LEFT           */
+/* ------------------------ */
+
+.accordion_wrap {
+  width: 100%;
+}
+
+.accordion_item {
+  border-radius: 6px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(30, 30, 60, 0.06);
+}
+
+.accordion_button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.acc_icon {
+  width: 40px;
+  height: 40px;
+  background: #8a2be2;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.acc_title {
+  flex: 1;
+  font-weight: 600;
+  color: #1e3a8a;
+  text-transform: none;
+}
+
+.accordion_content {
+  padding: 14px 18px;
+  background: #f0f4ff;
+  color: #1e3a8a;
+  line-height: 1.6;
+  border-top: 1px solid #d4ddff;
+}
+
+/* LIST FIXED */
+.job_details_list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 8px;
+}
+
+.job_details_list li {
+  text-align: left;
+  padding: 6px 0;
+  color: #2b3b57;
+}
+
+.job_enum {
+  text-align: left;
+  margin: 8px 0 10px 18px;
+  color: #1e3a8a;
+}
+
+.job_enum li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ------------------------ */
+/* APPLY CARD RIGHT         */
+/* ------------------------ */
+
+.apply_card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(30,30,60,0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+  border: 1px solid #e1d5ff;
+}
+
+.apply_card h3 { 
+  margin-bottom: 6px;
+  color: #8a2be2;
+}
+
+.apply_form input[type="file"] {
+  width: 100%;
+  padding: 8px 6px;
+  background: #f8f4ff;
+  border-radius: 6px;
+  border: 1px solid #d1c4ff;
+}
+
+.apply_form select {
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #cebfff;
+}
+
+/* Submit button */
+.career_btn{
+    margin-top: 8px;
+    padding: 10px;
+    color: #fff;
+    background-color:#8a2be2;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.career_btn:hover{
+    background: linear-gradient(90deg, #8a2be2, #1e90ff);
+}
+
+/* ------------------------ */
+/* DETAILS AREA             */
+/* ------------------------ */
+
+.status_text {
+  color: #1e8a3f;
+  font-weight: 600;
+}
+
+.career_details{
+    margin:50px 0;
+    text-align: center;
+}
+
+.career_det_h2{
+    color: #8a2be2;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.career_det_h5{ 
+  font-size: 20px; 
+  font-weight: 400; 
+  color:#1e3a8a;
+}
+
+/* Bar Animation */
+.career_bar_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:-25px;
+}
+
+.career_bar {
+  height: 6px;
+  width: 90px;
+  background-color: #8a2be2;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.career_circle {
+  position: absolute;
+  top: 40%;
+  transform: translate(0, -50%);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #1e90ff;
+  animation: Move-BG 3s linear infinite;
+}
+
+@keyframes Move-BG {
+  0% { transform: translate(0, -50%); }
+  100% { transform: translate(90px, -50%); }
+}
+
+/* ------------------------ */
+/* RESPONSIVE FIXES         */
+/* ------------------------ */
+
+@media (max-width: 1024px) {
+  .career_main {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .career_left,
+  .career_right {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .careerbanner_h1 { font-size: 42px; }
+}
+
+/* ------------------------------ */
+/* MOBILE FIX - APPLY CARD WIDTH */
+/* ------------------------------ */
+
+/* ------------------------------
+   APPLY FORM MOBILE RESPONSIVE FIX
+---------------------------------*/
+
+@media (max-width: 480px) {
+  .career_apply_form {
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .career_apply_form h3,
+  .career_apply_form h2 {
+    text-align: center !important;
+    font-size: 20px !important;
+  }
+
+  .career_apply_form input,
+  .career_apply_form select,
+  .career_apply_form textarea {
+    width: 100% !important;
+    padding: 12px !important;
+    margin-bottom: 14px !important;
+    border-radius: 8px !important;
+    border: 1px solid #ccc !important;
+    font-size: 15px !important;
+  }
+
+  .career_apply_form button {
+    width: 100% !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    border-radius: 8px !important;
+  }
+
+  /* remove unwanted left/right spacing */
+  .career_left,
+  .career_right {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* full width container alignment */
+  .career_container {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+}
+
+/* iPhone 12 Pro specific width fix */
+@media (max-width: 390px) {
+  .career_apply_form {
+    width: 94% !important;
+  }
+}

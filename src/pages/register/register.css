@@ -1,0 +1,155 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Left panel */
+/* Left panel violet background */
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #f3e8ff, #ede9fe); /* light violet shades */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Make SVG + image blend nicely */
+.left-panel img,
+.left-panel svg {
+  max-width: 80%;
+  height: auto;
+}
+
+
+.side-svg {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Right panel */
+.right-panel {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Form box styling - Violet background like reference */
+.form-box {
+  background: linear-gradient(180deg, #8a2be2, #7a1fc2);  /* violet gradient */
+  padding: 40px;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 10px 30px rgba(138, 43, 226, 0.5); /* violet shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+}
+
+.form-box h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Input & Select inside violet container */
+.form-box input,
+.form-box select {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: white;
+  color: #333;
+}
+
+.form-box input::placeholder {
+  color: #666;
+}
+
+/* Submit Button */
+.form-box button {
+  padding: 12px;
+  border-radius: 12px;
+  background: #a855f7; /* light violet */
+  border: none;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-box button:hover {
+  background: #9333ea; /* darker violet */
+}
+
+/* Thank you box */
+.thank-you-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+  color: #8a2be2;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .left-panel, .right-panel {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-box {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .thank-you-box {
+    padding: 20px;
+    width: 100%;
+  }
+}

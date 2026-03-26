@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --accent:#8a2be2;
+  --accent-2:#60a5fa;
+  --muted:#6b7280;
+  --bg-1: linear-gradient(135deg,#f9f5ff,#f3e8ff);
+  --card-bg: linear-gradient(135deg,#ede9fe,#e0f2fe);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",sans-serif}
+.about_page{
+  background: var(--bg-1);
+  min-height:100vh;
+  padding-top:100px;
+  padding-bottom:60px;
+  transition:opacity .8s ease,transform .8s ease;
+  opacity:0;
+  transform:translateX(-30px);
+}
+
+/* Show on mount */
+.about_page.show_page{
+  opacity:1;
+  transform:translateX(0);
+}
+
+/* reveal scroll */
+.scroll_section{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .9s ease,transform .9s ease;
+}
+.scroll_section.show_scroll{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* HERO */
+.hero_section{padding:40px 60px}
+.hero_left{display:flex;justify-content:center;align-items:center}
+.left_container_borders{width:280px;height:280px;position:relative}
+.left_img_wrap_1{width:280px;height:280px;border-radius:50%;background:#c4b5fd;position:absolute;top:20px;left:0;animation:rotateSlow 18s linear infinite}
+.left_img_wrap_2{width:230px;height:230px;border-radius:50%;background:#93c5fd;position:absolute;top:60px;left:25px;animation:rotateSlowRev 24s linear infinite}
+@keyframes rotateSlow{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes rotateSlowRev{from{transform:rotate(0)}to{transform:rotate(-360deg)}}
+.about_img{position:absolute;top:10px;left:-20px;width:265px;height:auto;border-radius:12%;box-shadow:0 10px 30px rgba(50,50,93,0.08)}
+
+/* HERO RIGHT */
+.hero_right{padding-left:30px}
+.about_right_h1{font-family:"Dancing Script",cursive;font-size:36px;color:var(--accent);margin-bottom:6px}
+.about_bar_container{position:relative;display:flex;align-items:center;margin-bottom:14px}
+.about_bar{height:4px;width:90px;border-radius:30px;background:var(--accent);position:relative;overflow:hidden}
+.about_circle{position:absolute;left:0;top:-7px;height:12px;width:12px;border-radius:50%;background:var(--accent-2);animation:Move-BG 3s linear infinite}
+@keyframes Move-BG{0%{transform:translateX(0)}100%{transform:translateX(90px)}}
+.about_right_p{color:#2c3e50;line-height:1.8;margin-bottom:18px;max-width:820px}
+.about_btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#fff;padding:12px 22px;border-radius:10px;font-weight:600;cursor:pointer;box-shadow:0 8px 20px rgba(60,50,120,0.12);transition:transform .25s ease}
+.about_btn:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(60,50,120,0.16)}
+
+/* MISSION / VISION sections */
+.about_mis_vis{display:flex;align-items:center;gap:40px;padding:36px 60px}
+.about_mis_vis_right{flex-direction:row-reverse}
+.about_mission img{width:320px;max-width:48%;border-radius:12px;box-shadow:0 12px 30px rgba(138,43,226,0.08)}
+.about_mis_content{background:var(--card-bg);padding:26px;border-radius:12px;box-shadow:0 10px 30px rgba(138,43,226,0.08);max-width:700px}
+.about_mis_h1{font-size:28px;color:var(--accent);margin-bottom:8px}
+.about_mis_p{color:#1e3a8a;line-height:1.8}
+
+/* ADVANTAGE CARDS */
+.advantage_section{padding:36px 60px}
+.advantage_inner{max-width:1200px;margin:0 auto;text-align:center}
+.section_title{font-size:28px;color:var(--accent);margin-bottom:6px}
+.section_sub{color:var(--muted);margin-bottom:20px}
+.cards_row{display:flex;gap:18px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.feature_card{background:#fff;padding:20px;border-radius:12px;min-width:250px;max-width:320px;box-shadow:0 12px 30px rgba(20,20,60,0.04);transition:transform .25s ease;text-align:left}
+.feature_card:hover{transform:translateY(-8px)}
+.card_icon{font-size:28px;margin-bottom:12px}
+.feature_card h3{margin-bottom:8px;color:#111}
+
+/* COMMITMENT GRID */
+.commitment_section{padding:40px 60px}
+.commitment_inner{max-width:1200px;margin:0 auto}
+.commitment_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.commit_card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(20,20,60,0.04)}
+.commit_card h4{color:var(--accent);margin-bottom:8px}
+.commit_card p{color:var(--muted);line-height:1.6}
+
+/* CTA */
+.cta_section{padding:48px 60px}
+.cta_inner{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(90deg,#efe9ff,#e8f5ff);padding:26px;border-radius:12px;box-shadow:0 12px 30px rgba(20,20,60,0.04)}
+.cta_texts h2{font-size:22px;color:var(--accent);margin-bottom:8px}
+.cta_texts p{color:var(--muted)}
+.cta_actions{display:flex;gap:12px}
+.primary_cta{background:var(--accent);color:#fff;padding:12px 20px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+.secondary_cta{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:10px 18px;border-radius:10px;cursor:pointer}
+
+/* Responsive */
+@media (max-width:1024px){
+  .about_mis_vis{flex-direction:column;padding:26px}
+  .about_mission img{width:100%;max-width:100%}
+  .about_img{width:220px}
+  .cards_row{justify-content:space-between}
+  .commitment_grid{grid-template-columns:1fr}
+  .cta_inner{flex-direction:column;gap:16px;text-align:center}
+  .cta_actions{justify-content:center}
+  .hero_section{padding:20px}
+  .advantage_section{padding:20px}
+}
+
+/* small tweaks */
+.section_title{font-weight:600}
+.feature_card p,.commit_card p{font-size:15px}

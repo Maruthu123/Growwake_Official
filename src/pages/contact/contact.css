@@ -1,0 +1,297 @@
+/* ================= Contact Page Background ================= */
+.contact_page {
+    background: linear-gradient(135deg, #f3e8ff, #e0f0ff); /* Light Violet → Light Blue */
+    min-height: 100vh;
+    padding: 40px 20px;
+    transition: background 0.5s ease;
+}
+
+/* ================= Container & Headings ================= */
+.contact_container {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px 20px; 
+    background: rgba(255, 255, 255, 0.05); /* subtle overlay */
+    border-radius: 12px;
+}
+
+.contact_heading {
+    color: #1d1d3a;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.contact_main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contact_title {
+    font-size: 20px;
+    color: #1d1d3a;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* ================= Contact Cards ================= */
+.contact_card {
+    background: linear-gradient(135deg, #ac6df0, #1e90ff); /* Violet → Blue */
+    border-radius: 12px;                
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+    width: 300px;                      
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;  
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact_card:hover {
+    transform: translateY(-10px) scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #1e90ff, #ac6df0);
+    filter: brightness(1.1);
+}
+
+.contact_border_icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_icon {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#eef3f1;
+    border-radius: 200%;
+}
+
+.contact_description {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.5;
+} 
+
+/* ================= Heading & Bar ================= */
+.contact_det {
+    text-align: center;
+    padding: 30px;
+}
+
+.contact_h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1d1d3a;
+}
+
+.contact_bar_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.contact_bar {
+    height: 5px; 
+    width: 90px;
+    background-color: #8f89f1;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact_circle {
+    position: absolute;
+    margin-right: 75px;
+    top: -5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #5e32cd;
+    animation: Move-BG 3s linear infinite;
+}
+
+@keyframes Move-BG {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(90px); }
+}
+
+/* ================= Contact Form ================= */
+.contactform_det {
+    display: flex;
+    gap: 100px;
+}
+
+.contact_form_left img {
+    margin-left: 90px;
+    max-width: 100%;
+    height: auto;
+}
+
+.contact_form_right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(135deg, #dcb3ff, #cceaff);  /* Light Violet → Light Blue */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;        
+    margin: 0 auto; 
+    transition: background 0.5s ease;
+}
+
+.contact_form_right form:hover {
+    background: linear-gradient(135deg, #cceaff, #dcb3ff); 
+}
+
+.contact_form_right .MuiTextField-root {
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.contact_btn {
+    background: linear-gradient(135deg, #9940f2, #1e90ff);  
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 25px;  
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: fit-content; 
+    min-width: 120px;    
+    transition: all 0.4s ease;
+}
+
+.contact_btn:hover {
+    background: linear-gradient(135deg, #1e90ff, #9940f2);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.contactform_det p {
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #1d1d3a;
+}
+
+/* ================= Bottom Info Section (Phone, Email, Map) ================= */
+.contact_info_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.contact_info_card {
+    background: linear-gradient(135deg, #ac6df0, #1e90ff); /* Violet → Blue */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    width: 250px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.5s ease, background 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+}
+
+.contact_info_card:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: linear-gradient(135deg, #1e90ff, #ac6df0);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.contact_info_icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.contact_info_text {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* ================= Responsive ================= */
+@media (max-width:768px) {
+    .contactform_det {
+        flex-direction: column;
+        align-items: center;
+        gap:30px; 
+    }
+    .contact_form_left img {
+        width: 100%;
+        margin-left: 0; 
+    }
+    .contact_det { 
+        padding: 20px; 
+    }
+    .contact_form_right form {
+        width: 95%;        
+        max-width: 600px;  
+        margin: 0 auto;    
+    }
+    .contact_card {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .contact_info_card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:480px) {
+    .contact_form_right form {
+        width: 130%;
+        max-width: 100%;  
+        padding: 20px;
+    }
+    .contact_form_right .MuiFormControl-root {
+        width: 100% !important;
+    }
+    .contact_form_right .MuiInputLabel-root,
+    .contact_form_right .MuiInputBase-input { 
+        font-size: 14px !important; 
+    }
+    .contact_card {
+        width: 90%; 
+    }
+}
+/* Desktop fix: Keep content below navbar */
+.contact_page {
+  padding-top: 120px; /* adjust 100–140px based on your navbar height */
+  align-items: center;
+  
+}
+
+.contact_page h1 {
+  text-align: center;
+  width: 100%;
+}
